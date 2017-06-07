@@ -1,0 +1,9 @@
+c:\users\hs09\documents\visual studio 2015\Projects\HSImageCropper\HSImageCropper\bin\Debug\HSImageCropper.exe.config
+c:\users\hs09\documents\visual studio 2015\Projects\HSImageCropper\HSImageCropper\bin\Debug\HSImageCropper.exe
+c:\users\hs09\documents\visual studio 2015\Projects\HSImageCropper\HSImageCropper\bin\Debug\HSImageCropper.pdb
+c:\users\hs09\documents\visual studio 2015\Projects\HSImageCropper\HSImageCropper\obj\Debug\HSImageCropper.csprojResolveAssemblyReference.cache
+c:\users\hs09\documents\visual studio 2015\Projects\HSImageCropper\HSImageCropper\obj\Debug\HSImageCropper.Form1.resources
+c:\users\hs09\documents\visual studio 2015\Projects\HSImageCropper\HSImageCropper\obj\Debug\HSImageCropper.Properties.Resources.resources
+c:\users\hs09\documents\visual studio 2015\Projects\HSImageCropper\HSImageCropper\obj\Debug\HSImageCropper.csproj.GenerateResource.Cache
+c:\users\hs09\documents\visual studio 2015\Projects\HSImageCropper\HSImageCropper\obj\Debug\HSImageCropper.exe
+c:\users\hs09\documents\visual studio 2015\Projects\HSImageCropper\HSImageCropper\obj\Debug\HSImageCropper.pdb
