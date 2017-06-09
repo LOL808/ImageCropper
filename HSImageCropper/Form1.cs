@@ -54,6 +54,8 @@ namespace HSImageCropper
 
             public int _squadX;
             public int _squadY;
+
+            public PictureBox previewPictureBox;
               
             public void setAvatarCood(int x, int y)
             {
@@ -88,7 +90,7 @@ namespace HSImageCropper
             }
         }
 
-
+        private PictureBox previewPictureBox = null;
         private MODE curMode = MODE.MODE_AVATAR;
         //private List<String> resImages = new List<string>(100);
         private String folderPath = "";
@@ -118,11 +120,11 @@ namespace HSImageCropper
         {
             CoordHint.Visible = false;
             radioButton1.Checked = true;
-            hintView.BackColor = Color.FromArgb(0, 0, 0, 0);
+            hintView.BackColor = Color.FromArgb(200,200,200,200);
             //BorderStyle
             hintView.Enabled = false;
             
-            hintView.Paint += new System.Windows.Forms.PaintEventHandler(this.hintview_Paint);
+            //hintView.Paint += new System.Windows.Forms.PaintEventHandler(this.hintview_Paint);
 
             int avatarID = (int)HOTKEYID.HOTKEY_AVATAR;
             RegisterHotKey(this.Handle, avatarID, (int)KeyModifier.None, Keys.Q.GetHashCode());
@@ -253,12 +255,12 @@ namespace HSImageCropper
             this.listView1.Columns.Add("文件名", 175, HorizontalAlignment.Left);
             this.listView1.Columns.Add("头像数据点", 96, HorizontalAlignment.Right);
             this.listView1.Columns.Add("部队数据点", 96, HorizontalAlignment.Right);
-            listView1.ColumnWidthChanging += (e, sender) =>
-            {
-                ColumnWidthChangingEventArgs arg = (ColumnWidthChangingEventArgs)sender;
-                arg.Cancel = true;
-                arg.NewWidth = listView1.Columns[arg.ColumnIndex].Width;
-            };
+            //listView1.ColumnWidthChanging += (e, sender) =>
+            //{
+            //    ColumnWidthChangingEventArgs arg = (ColumnWidthChangingEventArgs)sender;
+            //    arg.Cancel = true;
+            //    arg.NewWidth = listView1.Columns[arg.ColumnIndex].Width;
+            //};
         }
 
 
@@ -383,6 +385,36 @@ namespace HSImageCropper
                 return;
             }
             saveData();
+        }
+
+        private void listView1_ItemMouseHover(object sender, ListViewItemMouseHoverEventArgs e)
+        {
+            //e.Item.BackColor = Color.Red;
+            String name = e.Item.SubItems[0].Text;
+            if (previewPictureBox==null)
+            {
+                previewPictureBox = new PictureBox();
+                previewPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                previewPictureBox.BackColor = Color.Transparent;
+                previewPictureBox.Size = new Size(200, 200);
+                //previewPictureBox.BackColor = Color.Transparent;
+               
+            }
+            Image img = Image.FromFile(Path.Combine(@folderPath, @name));
+            //previewPictureBox.Size = img.Size;
+            previewPictureBox.Location = new Point(this.Size.Width - previewPictureBox.Size.Width, 0);
+            previewPictureBox.Image = img;
+            this.Controls.Add(previewPictureBox);
+            previewPictureBox.BringToFront();
+
+        }
+
+        private void listView1_MouseLeave(object sender, EventArgs e)
+        {
+            if (previewPictureBox!=null) {
+                previewPictureBox.Parent.Controls.Remove(previewPictureBox);
+                previewPictureBox = null;
+            }
         }
     }
 }

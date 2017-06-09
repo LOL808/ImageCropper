@@ -85,19 +85,20 @@
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.ItemMouseHover += new System.Windows.Forms.ListViewItemMouseHoverEventHandler(this.listView1_ItemMouseHover);
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listView1.MouseLeave += new System.EventHandler(this.listView1_MouseLeave);
             // 
             // pictureBox
             // 
-            this.pictureBox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox.BackgroundImage = global::HSImageCropper.Properties.Resources.logo2;
+            this.pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox.ErrorImage = null;
             this.pictureBox.InitialImage = null;
             this.pictureBox.Location = new System.Drawing.Point(68, 54);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(250, 280);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.Size = new System.Drawing.Size(247, 278);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
@@ -160,9 +161,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(739, 458);
+            this.ClientSize = new System.Drawing.Size(755, 481);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.CoordHint);
             this.Controls.Add(this.radioButton2);

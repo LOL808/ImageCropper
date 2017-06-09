@@ -6,3 +6,4 @@ C:\Users\HS09\Documents\Visual Studio 2015\Projects\HSImageCropper\HSImageCroppe
 C:\Users\HS09\Documents\Visual Studio 2015\Projects\HSImageCropper\HSImageCropper\obj\Release\HSImageCropper.csproj.GenerateResource.Cache
 C:\Users\HS09\Documents\Visual Studio 2015\Projects\HSImageCropper\HSImageCropper\obj\Release\HSImageCropper.exe
 C:\Users\HS09\Documents\Visual Studio 2015\Projects\HSImageCropper\HSImageCropper\obj\Release\HSImageCropper.pdb
+C:\Users\HS09\Documents\Visual Studio 2015\Projects\HSImageCropper\HSImageCropper\obj\Release\HSImageCropper.csprojResolveAssemblyReference.cache
